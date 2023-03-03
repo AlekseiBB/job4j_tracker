@@ -2,7 +2,7 @@ package ru.job4j.oop;
 
 public class Jukebox {
 
-    public static void music(int position) {
+    public void music(int position) {
         switch (position) {
             case 1 -> System.out.println("Пусть бегут неуклюже");
             case 2 -> System.out.println("Спокойной ночи");
