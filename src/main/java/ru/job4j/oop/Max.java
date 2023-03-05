@@ -31,13 +31,4 @@ public class Max {
             }
         }
     }
-
-    public static void main(String[] args) {
-        System.out.println(max(4, 11));
-        System.out.println(max(99, 15));
-        System.out.println(max(14, 121, 88));
-        System.out.println(max(44, 1, 15));
-        System.out.println(max(7, 18, 1, 35));
-        System.out.println(max(1, 31, 25, 8));
-    }
 }
