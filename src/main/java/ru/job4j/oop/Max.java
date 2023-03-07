@@ -8,27 +8,10 @@ public class Max {
 
     public static int max(int first, int second, int third) {
         int result = third;
-        if (first >= second && first >= third) {
-            result = first;
-        }
-        if (second >= first && second >= third) {
-            result = second;
-        }
-        return result;
+        return max(first, max(second, third));
     }
 
     public static int max(int first, int second, int third, int four) {
-        if (first == max(first, second, third) && first > four)
-            return first;
-        else {
-            if (second == max(first, second, third) && second > four)
-                return second;
-            else {
-                if (third == max(first, second, third) && third > four)
-                    return third;
-                else
-                    return four;
-            }
-        }
+        return max(first, max(second, third, four));
     }
 }
