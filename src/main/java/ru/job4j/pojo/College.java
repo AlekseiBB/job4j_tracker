@@ -8,6 +8,7 @@ public class College {
         student.setFullname("Ivanov Ivan Sergeevich");
         student.setGroup("Functional programming");
         student.setReceiptDate(new Date());
-        System.out.println(student.getFullname() + " studying in a group " + student.getGroup() + ": " + student.getReceiptDate());
+        System.out.println(student.getFullname() + " studying in a group " + student.getGroup() + ": "
+                 + student.getReceiptDate());
     }
 }
