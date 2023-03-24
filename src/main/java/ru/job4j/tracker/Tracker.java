@@ -38,8 +38,8 @@ public class Tracker {
         int count = 0;
         for (int index = 0; index < size; index++) {
             Item item = items[index];
-            if (key.equals(item.getName())) {
-                rsl[index] = item;
+            if (item.getName().equals(key)) {
+                rsl[count] = item;
                 count++;
             }
         }
