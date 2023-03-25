@@ -1,9 +1,9 @@
 package ru.job4j.poly;
 
 public interface Transport {
-    int move();
+    void move();
 
-    int passengers(int numPassengers);
+    void passengers(int numPassengers);
 
     double refuel(double fuelAmount);
 }
