@@ -28,7 +28,8 @@ public class StartUI {
                 new EditAction(),
                 new FindByIdAction(),
                 new FindByNameAction(),
-                new ShowAllAction()
+                new ShowAllAction(),
+                new ExitAction()
         };
         new StartUI().init(input, tracker, actions);
     }
