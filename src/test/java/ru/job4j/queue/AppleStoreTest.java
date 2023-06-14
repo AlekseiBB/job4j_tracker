@@ -39,6 +39,4 @@ public class AppleStoreTest {
         String customer = appleStore.getFirstUpsetCustomer();
         assertThat(customer).isEqualTo("Iryna");
     }
-
-
 }
