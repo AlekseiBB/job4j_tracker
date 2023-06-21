@@ -1,23 +1,25 @@
 package ru.job4j.queue;
 
 import java.util.Deque;
+import java.util.Iterator;
 
 public class ReconstructPhrase {
 
-    private final Deque<Character> descendingElements;
-
+    private final Deque<Character> descedingElement;
     private final Deque<Character> evenElements;
 
-    public ReconstructPhrase(Deque<Character> descendingElements, Deque<Character> evenElements) {
-        this.descendingElements = descendingElements;
-        this.evenElements = evenElements;
+    public ReconstructPhrase(Deque<Character> descedingElement, Deque<Character> eventElement) {
+        this.descedingElement = descedingElement;
+        this.evenElements = eventElement;
     }
 
     private String getEvenElements() {
         StringBuilder result = new StringBuilder();
-        for (Character c : evenElements) {
-            if (c % 2 == 0) {
-                result.append(c);
+        int size = evenElements.size();
+        for (int i = 0; i < size; i++) {
+            Character character = evenElements.pollFirst();
+            if (i % 2 == 0) {
+                result.append(character);
             }
         }
         return result.toString();
@@ -25,8 +27,9 @@ public class ReconstructPhrase {
 
     private String getDescendingElements() {
         StringBuilder result = new StringBuilder();
-        while (!descendingElements.isEmpty()) {
-            result.append(descendingElements.pollLast());
+        Iterator<Character> iterator = descedingElement.descendingIterator();
+        while (iterator.hasNext()) {
+            result.append(iterator.next());
         }
         return result.toString();
     }
@@ -34,5 +37,4 @@ public class ReconstructPhrase {
     public String getReconstructPhrase() {
         return getEvenElements() + getDescendingElements();
     }
-
 }
