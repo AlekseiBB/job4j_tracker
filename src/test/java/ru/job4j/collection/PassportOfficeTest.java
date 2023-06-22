@@ -23,5 +23,4 @@ public class PassportOfficeTest {
         boolean secondAdd = office.add(citizenDuplicate);
         assertThat(secondAdd).isFalse();
     }
-
 }
