@@ -16,7 +16,7 @@ public class UserStore {
         return result;
     }
 
-        public static boolean validate (User user) throws UserInvalidException {
+        public static boolean validate(User user) throws UserInvalidException {
             if (user.getUsername() == null || user.getUsername().length() < 3) {
                 throw new UserInvalidException("Пользователь не валидный. Имя должно содержать не менее 3 символов." + user);
             }
@@ -26,7 +26,7 @@ public class UserStore {
             return false;
         }
 
-        public static void main (String[]args) throws UserNotFoundException {
+        public static void main(String[]args) throws UserNotFoundException {
             User[] users = {
                     new User("Petr Arsentev", true)
             };

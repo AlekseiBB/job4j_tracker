@@ -13,7 +13,6 @@ public class PassportOfficeTest {
         assertThat(office.get(citizen.getPassport())).isEqualTo(citizen);
     }
 
-
     @Test
     public void whenAddDuplicatePassport() {
         Citizen citizen = new Citizen("12fra5", "Arseni Lukin");

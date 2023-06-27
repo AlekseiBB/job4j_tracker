@@ -18,7 +18,6 @@ public class PhoneDictionaryTest {
         assertThat(persons.get(0).getSurname()).isEqualTo("Arsentev");
     }
 
-
     @Test
     public void testFindWhenNoResults() {
         PhoneDictionary phones = new PhoneDictionary();
