@@ -36,5 +36,3 @@ public class Citizen {
         return Objects.hash(passport);
     }
 }
-
-// провека лога бота
