@@ -65,12 +65,8 @@ public class AnalyzeByMap {
         List<Label> listOfSubjects = new ArrayList<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
-                if (totalScoreBySubject.containsKey(subject.name())) {
-                    totalScoreBySubject.put(subject.name(), subject.score()
-                            + totalScoreBySubject.get(subject.name()));
-                } else {
-                    totalScoreBySubject.put(subject.name(), subject.score());
-                }
+                totalScoreBySubject.putIfAbsent(subject.name(), 0);
+                totalScoreBySubject.put(subject.name(), totalScoreBySubject.get(subject.name()) + subject.score());
             }
         }
         for (String subject : totalScoreBySubject.keySet()) {
