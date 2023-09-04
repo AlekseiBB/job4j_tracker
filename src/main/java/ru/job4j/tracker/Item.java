@@ -72,6 +72,6 @@ public class Item implements Comparable<Item> {
 
     @Override
     public int compareTo(Item o) {
-        return 0;
+        return this.name.compareTo(o.name);
     }
 }
