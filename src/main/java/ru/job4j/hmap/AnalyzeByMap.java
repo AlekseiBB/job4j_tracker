@@ -66,7 +66,7 @@ public class AnalyzeByMap {
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
                 totalScoreBySubject.putIfAbsent(subject.name(), 0);
-                totalScoreBySubject.put(subject.name(), totalScoreBySubject.get(subject.name()) + subject.score());
+                totalScoreBySubject.put(subject.name(), totalScoreBySubject.getOrDefault(subject.name(), 0) + subject.score());
             }
         }
         for (String subject : totalScoreBySubject.keySet()) {
