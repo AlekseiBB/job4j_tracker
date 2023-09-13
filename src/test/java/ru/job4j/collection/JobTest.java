@@ -13,7 +13,7 @@ public class JobTest {
         Job job2 = new Job("Impl task", 1);
 
         int rsl = cmpByNameAsc.compare(job1, job2);
-        assertThat(rsl).isLessThan(0); // a.compareTo(b) < 0          a.isLessThan(b)
+        assertThat(rsl).isLessThan(0);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class JobTest {
         Job job2 = new Job("Impl task", 1);
 
         int rsl = cmpByPriorityAsc.compare(job1, job2);
-        assertThat(rsl).isLessThan(0); // a.compareTo(b) < 0          a.isLessThan(b)
+        assertThat(rsl).isLessThan(0);
     }
 
     @Test
@@ -33,7 +33,7 @@ public class JobTest {
         Job job2 = new Job("Impl task", 1);
 
         int rsl = cmpByNameDesc.compare(job1, job2);
-        assertThat(rsl).isGreaterThan(0); // a.compareTo(b) > 0          a.isGreaterThan(b)
+        assertThat(rsl).isGreaterThan(0);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class JobTest {
         Job job2 = new Job("Impl task", 1);
 
         int rsl = cmpByPriorityDesc.compare(job1, job2);
-        assertThat(rsl).isGreaterThan(0); // a.compareTo(b) > 0          a.isGreaterThan(b)
+        assertThat(rsl).isGreaterThan(0);
 
     }
 
@@ -54,7 +54,7 @@ public class JobTest {
         Job job2 = new Job("FixTest", 111);
 
         int rsl = cmpByNameEqual.compare(job1, job2);
-        assertThat(rsl).isEqualTo(0); // a.compareTo(b) == 0         a.isEqualTo(b)
+        assertThat(rsl).isEqualTo(0);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class JobTest {
         Job job2 = new Job("Impl task", 99);
 
         int rsl = cmpByPriorityEqual.compare(job1, job2);
-        assertThat(rsl).isEqualTo(0); // a.compareTo(b) == 0         a.isEqualTo(b)
+        assertThat(rsl).isEqualTo(0);
 
     }
 
@@ -75,7 +75,7 @@ public class JobTest {
                 new Job("Impl task", 0),
                 new Job("Fix bug", 1)
         );
-        assertThat(rsl).isLessThan(0); // a.compareTo(b) < 0          a.isLessThan(b)
+        assertThat(rsl).isLessThan(0);
     }
 
     @Test
@@ -85,6 +85,6 @@ public class JobTest {
                 new Job("Impl task", 0),
                 new Job("Fix bug", 1)
         );
-        assertThat(rsl).isGreaterThan(0); // a.compareTo(b) > 0          a.isGreaterThan(b)
+        assertThat(rsl).isGreaterThan(0);
     }
 }
