@@ -75,7 +75,7 @@ public class JobTest {
                 new Job("Fix bug", 1),
                 new Job("Impl task", 0)
         );
-        assertThat(rsl).isLessThan(0);
+        assertThat(rsl).isGreaterThan(0);
     }
 
     @Test
@@ -85,6 +85,6 @@ public class JobTest {
                 new Job("Fix bug", 1),
                 new Job("Impl task", 0)
         );
-        assertThat(rsl).isGreaterThan(0);
+        assertThat(rsl).isLessThan(0);
     }
 }
