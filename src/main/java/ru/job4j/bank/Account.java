@@ -22,8 +22,8 @@ public class Account {
     /**
      * конструктор класса Account. Используются для создания объектов класса
      * значения этих полей в соответствии с переданными значениями.
-     * @param requisite
-     * @param balance
+     * @param requisite реквизиты
+     * @param balance баланс
      */
     public Account(String requisite, double balance) {
         this.requisite = requisite;
