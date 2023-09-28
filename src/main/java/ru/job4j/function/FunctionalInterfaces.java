@@ -25,9 +25,7 @@ public class FunctionalInterfaces {
                 System.out.println("key: " + i + " value: " + map.get(i));
             }
         }
-        /*
-            Заменить создание ArrayList из значений Map на Supplier, объявлен ниже, требуется его реализовать.
-         */
+
         Supplier<List<String>> sup = () -> new ArrayList<>(map.values());
         List<String> strings = sup.get();
 
@@ -35,12 +33,6 @@ public class FunctionalInterfaces {
         Function<String, String> func = (s) -> s.toUpperCase();
         for (String s : strings) {
             con.accept(func.apply(s));
-            /*
-                Заменить вывод строк на применение Consumer
-                Заменить преобразование строк к строкам в верхнем регистре с помощью Function
-                Необходимое объявлено выше, требуется их реализовать.
-            */
-            System.out.println(s.toUpperCase());
         }
     }
 }
