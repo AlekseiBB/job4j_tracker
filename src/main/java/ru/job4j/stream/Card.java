@@ -15,6 +15,6 @@ public class Card {
         Stream<Card> desk = Stream.of(Suit.values())
                 .flatMap(suit -> Stream.of(Value.values())
                         .map(value -> new Card(suit, value)));
-        desk.forEach(System.out::println);
+        desk.forEach(card -> System.out.println(card.suit + " " + card.value));
     }
 }
