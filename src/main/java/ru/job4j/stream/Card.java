@@ -1,5 +1,6 @@
 package ru.job4j.stream;
 
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Card {
@@ -11,10 +12,18 @@ public class Card {
         this.value = value;
     }
 
+    @Override
+    public String toString() {
+        return "Card{"
+                + "suit=" + suit
+                + ", value=" + value
+                + '}';
+    }
+
     public static void main(String[] args) {
         Stream<Card> desk = Stream.of(Suit.values())
                 .flatMap(suit -> Stream.of(Value.values())
                         .map(value -> new Card(suit, value)));
-        desk.forEach(card -> System.out.println(card.suit + " " + card.value));
+        desk.forEach(System.out::println);
     }
 }
