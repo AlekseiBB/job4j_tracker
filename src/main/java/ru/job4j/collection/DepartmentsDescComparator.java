@@ -8,15 +8,6 @@ public class DepartmentsDescComparator implements Comparator<String> {
         String[] split1 = o1.split("/");
         String[] split2 = o2.split("/");
         int result = split2[0].compareTo(split1[0]);
-        if (result == 0) {
-            for (int i = 1; i < Math.min(split1.length, split2.length); i++) {
-                result = split1[i].compareTo(split2[i]);
-                if (result != 0) {
-                    return result;
-                }
-            }
-            result = Integer.compare(split1.length, split2.length);
-        }
-        return result;
+        return result != 0 ? result : o1.compareTo(o2);
     }
 }
