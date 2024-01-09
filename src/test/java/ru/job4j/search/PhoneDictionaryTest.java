@@ -1,6 +1,5 @@
 package ru.job4j.search;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void whenFindByName() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Petr", "Arsentev", "534872", "Bryansk"));
         ArrayList<Person> persons = phones.find("Petr");
         assertThat(persons.get(0).getSurname()).isEqualTo("Arsentev");
@@ -20,7 +19,7 @@ public class PhoneDictionaryTest {
 
     @Test
     public void testFindWhenNoResults() {
-        PhoneDictionary phones = new PhoneDictionary();
+        var phones = new PhoneDictionary();
         phones.add(new Person("Ivan", "Petrov", "1234567", "Moscow"));
         phones.add(new Person("Sergey", "Ivanov", "7654321", "Saint-Petersburg"));
         phones.add(new Person("Maria", "Sidorova", "9876543", "Novosibirsk"));
